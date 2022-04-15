@@ -6,6 +6,8 @@ from unittest import signals
 from django.db import models
 from datetime import date
 
+from pacientes.models import Paciente 
+
 
 class Analisis(models.Model):
     nombre = models.CharField(max_length=120)
@@ -56,21 +58,21 @@ class AnalisisValidosCargo(models.Model):
     cargo = models.ForeignKey(Cargo, on_delete=models.CASCADE)
     analisis = models.ForeignKey(Analisis, on_delete=models.CASCADE)
 
-class Paciente(models.Model):
-    nombre = models.CharField(max_length=25)
-    apellidos = models.CharField(max_length=25)
-    fechaNacimiento = models.DateField()
-    sexo = models.CharField(max_length=2)
-    notas = models.TextField(null=True, blank=True)
+# class Paciente(models.Model):
+#     nombre = models.CharField(max_length=25)
+#     apellidos = models.CharField(max_length=25)
+#     fechaNacimiento = models.DateField()
+#     sexo = models.CharField(max_length=2)
+#     notas = models.TextField(null=True, blank=True)
     
     
-    def edad(self):
-        days_in_year = 365.2425    
-        age = int((date.today() - self.fechaNacimiento).days / days_in_year) 
-        return age 
+#     def edad(self):
+#         days_in_year = 365.2425    
+#         age = int((date.today() - self.fechaNacimiento).days / days_in_year) 
+#         return age 
     
-    def __str__(self):
-        return str(self.id) + ", " + self.nombre + ", " + self.apellidos
+#     def __str__(self):
+#         return str(self.id) + ", " + self.nombre + ", " + self.apellidos
         
 class Medico(models.Model):
     nombre = models.CharField(max_length=25)
@@ -79,7 +81,8 @@ class Medico(models.Model):
     
     def __str__(self):
         return str(self.id) + ", " + self.apellidos + " " + self.nombre
-    
+
+
 class OrdenTrabajo(models.Model):
     fecha = models.DateField()
     secuencia = models.SmallIntegerField()

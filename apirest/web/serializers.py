@@ -1,7 +1,9 @@
 from dataclasses import fields
 from pyexpat import model
 from rest_framework import serializers
-from .models import Analisis, BaseResultados, Cargo, ComposicionAnalisis, Medico, OrdenTrabajo, Paciente, Prueba, Rango, AnalisisValidosCargo
+from .models import Analisis, BaseResultados, Cargo, ComposicionAnalisis, Medico, OrdenTrabajo,  Prueba, Rango, AnalisisValidosCargo
+
+
 
 class PruebaSerializers(serializers.ModelSerializer):
     class Meta:
@@ -33,10 +35,10 @@ class AnalisisValidosCargoSerializer(serializers.ModelSerializer):
         model = AnalisisValidosCargo
         fields = '__all__'
 
-class PacientesSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Paciente
-        fields = '__all__'
+# class PacientesSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Paciente
+#         fields = '__all__'
         
 class MedicosSerializer(serializers.ModelSerializer):
     class Meta:

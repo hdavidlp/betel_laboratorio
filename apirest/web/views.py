@@ -44,9 +44,9 @@ class AnalisisValidosCargoViewsets(viewsets.ModelViewSet):
     queryset = AnalisisValidosCargo.objects.all()
     serializer_class =  AnalisisValidosCargoSerializer
     
-class PacientesViewsets(viewsets.ModelViewSet):
-    queryset =  Paciente.objects.all()
-    serializer_class =  PacientesSerializer
+# class PacientesViewsets(viewsets.ModelViewSet):
+#     queryset =  Paciente.objects.all()
+#     serializer_class =  PacientesSerializer
     
 class MedicosViewsets(viewsets.ModelViewSet):
     queryset =  Medico.objects.all()

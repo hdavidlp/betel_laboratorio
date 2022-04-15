@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
 
     'web',  # declarar la inclusion de Applicacion
+    'pacientes',
     'rest_framework', # inclusion de rest_framework
     
 ]
