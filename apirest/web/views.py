@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Analisis, AnalisisValidosCargo, BaseResultados, Cargo, ComposicionAnalisis, Medico, OrdenTrabajo, Paciente, Prueba, Rango
+from .models import Analisis, AnalisisValidosCargo,  Cargo, ComposicionAnalisis, Medico,   Prueba, Rango
 from .serializers import PruebaSerializers, AnalisisSerializers, RangoSerializer, ComposicionAnalisisSerializer, CargoSerializer
-from .serializers import AnalisisValidosCargoSerializer, PacientesSerializer, MedicosSerializer, OTSerializer, BaseResultadosSerializer
+from .serializers import AnalisisValidosCargoSerializer,  MedicosSerializer
 
+# from ots.models import BaseResultados
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -52,10 +53,10 @@ class MedicosViewsets(viewsets.ModelViewSet):
     queryset =  Medico.objects.all()
     serializer_class =  MedicosSerializer
 
-class OTViewsets(viewsets.ModelViewSet):
-    queryset = OrdenTrabajo.objects.all()
-    serializer_class =  OTSerializer
+# class OTViewsets(viewsets.ModelViewSet):
+#     queryset = OrdenTrabajo.objects.all()
+#     serializer_class =  OTSerializer
     
-class BaseResultadosViewsets(viewsets.ModelViewSet):
-    queryset =  BaseResultados.objects.all()
-    serializer_class =  BaseResultadosSerializer
+# class BaseResultadosViewsets(viewsets.ModelViewSet):
+#     queryset =  BaseResultados.objects.all()
+#     serializer_class =  BaseResultadosSerializer

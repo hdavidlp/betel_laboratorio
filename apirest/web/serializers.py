@@ -1,8 +1,8 @@
 from dataclasses import fields
 from pyexpat import model
 from rest_framework import serializers
-from .models import Analisis, BaseResultados, Cargo, ComposicionAnalisis, Medico, OrdenTrabajo,  Prueba, Rango, AnalisisValidosCargo
-
+from .models import Analisis,  Cargo, ComposicionAnalisis, Medico,   Prueba, Rango, AnalisisValidosCargo
+# from ots.models import BaseResultados
 
 
 class PruebaSerializers(serializers.ModelSerializer):
@@ -45,15 +45,15 @@ class MedicosSerializer(serializers.ModelSerializer):
         model = Medico
         fields = '__all__'
 
-class OTSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = OrdenTrabajo
-        fields = '__all__'
+# class OTSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = OrdenTrabajo
+#         fields = '__all__'
         
-class BaseResultadosSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = BaseResultados
-        fields = '__all__'
+# class BaseResultadosSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = BaseResultados
+#         fields = '__all__'
         
 
         

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'web',  # declarar la inclusion de Applicacion
     'pacientes',
+    'ots',
     'rest_framework', # inclusion de rest_framework
     
 ]
